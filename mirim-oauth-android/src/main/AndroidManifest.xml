@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <application>
+        <!-- OAuth 리다이렉트를 처리하기 위한 투명한 액티비티 -->
+        <activity
+            android:name="kr.mmhs.oauth.OAuthRedirectActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 여기서 scheme는 앱별로 다르게 설정해야 함 -->
+                <data android:scheme="mirim-oauth" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest> 

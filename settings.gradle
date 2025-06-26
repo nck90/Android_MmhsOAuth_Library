@@ -1,0 +1,2 @@
+include ':mirim-oauth-android'
+rootProject.name = "Android_MmhsOAuth_Library" 
